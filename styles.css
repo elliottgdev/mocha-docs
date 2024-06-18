@@ -1,0 +1,36 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    border: 0px;
+    border-bottom: 3px;
+    border-style: dashed;
+    border-color: #35383b;
+    display:flex;
+}
+.header h1{
+    width: 500px;
+}
+.header p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.sidebar{
+    float: right;
+    width: 20%;
+    border: 0px;
+    border-left: 3px;
+    border-bottom: 3px;
+    border-style: dashed;
+    padding-left: 10px;
+    height: 500px;
+}
+p{
+    width: 70%;
+}
+.codeblock{
+    width: 70%;
+    padding: 10px;
+    background-color: #35383b;
+    color: white;
+}

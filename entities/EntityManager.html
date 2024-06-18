@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    
+<div class="header">
+    <h1>mocha game documentation</h1>
+    <p>the open source java game engine</p>
+</div>
+
+<div class="sidebar">
+    <h4>table of contents</h4>
+    <a href="../index.html">Homepage</a> 
+    <br><a href="../entities/">Entities</a> 
+    <br><a href="../rendering/">Rendering</a> 
+</div>
+
+<h2>EntityManager.java</h2>
+<p>The Entity Manager class is a useful and easier way of making, storing, and handling entities.</p>
+<div class="declaration">
+    <h3>declaration</h3>
+    <p>EntityManager takes in a Renderer, StaticShader, and a Loader. 
+        <br>It takes these in now so you don't have to input these as parameters into EntityManager methods.
+    </p>
+    <div class="codeblock">
+        <p>EntityManager entityManager = new EntityManager(renderer, shader, loader);</p>
+    </div>
+    <p>When declared, it will load all the .ntt's in the /src/entities/ntt directory as Entities in the entities ArrayList.</p>
+</div>
+
+<div class="methods">
+    <h3>methods</h3>
+    <div class="codeblock"><p>EntityManager.renderEntities();</p></div>
+    <p>This method renders all the Entities in the entities ArrayList.
+        <br>It should be placed in your game's while loop in your game's main script.
+        <br>example;
+    </p>
+    
+    <div class="codeblock"><p>
+        while(!Display.isCloseRequested()) {
+        <br>&nbsp &nbsp &nbsp &nbsp renderer.prepare();
+        <br>&nbsp &nbsp &nbsp &nbsp shader.start();
+        <br>&nbsp &nbsp &nbsp &nbsp shader.loadViewMatrix(camera);
+        <br>&nbsp &nbsp &nbsp &nbsp shader.setUniformVector("viewPos", camera.getPosition());
+        <br>&nbsp &nbsp &nbsp &nbsp entityManager.entities.get(entityManager.getEntityByName("test")).increaseRotation(1, 1, 1);
+        <br>&nbsp &nbsp &nbsp &nbsp entityManager.renderEntities();
+        <br>&nbsp &nbsp &nbsp &nbsp shader.stop();
+        <br>&nbsp &nbsp &nbsp &nbsp DisplayManager.updateDisplay();
+        <br>}</p>
+    </div>
+
+    <br>
+
+    <div class="codeblock"><p>EntityManager.getEntityByName(String name);</p></div>
+    <p>This method takes in a String and returns an int.
+        <br>What this method does is it will compare the names of all the Entities in the entities 
+        ArrayList and return the index of the first Entity it finds in the list with a matching name.
+        <br>
+        <br><i>Note: It is for this reason that it is adviced to not have multiple entities with the same name</i>
+        <br>
+        <br>A useful use of this method is to store a reference of an Entity to run code on.
+        <br>example;
+    </p>
+    <div class="codeblock"><p>Entity testEntity = entityManager.entities.get(entityManager.getEntityByName("testEntity"));</p></div>
+
+</div>
+
+</body>
+</html>

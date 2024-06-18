@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    
+<div class="header">
+    <h1>mocha game documentation</h1>
+    <p>the open source java game engine</p>
+</div>
+
+<div class="sidebar">
+    <h4>table of contents</h4>
+    <a href="../index.html">Homepage</a> 
+    <br><a href="../entities/">Entities</a> 
+    <br><a href="../rendering/">Rendering</a> 
+</div>
+
+<h2>Entity.java</h2>
+<p>The Entity class is used to make interactive game objects such as the player or an enemy.</p>
+<div class="declaration">
+    <h3>declaration</h3>
+    <p>EntityManager takes in a String for the name, a TexturedModel, a Vector3f for the position, three floats for the rotation, and a float for the scale.</p>
+    <div class="codeblock">
+        <p>Entity entity = new Entity(name, texturedModel, position, rotX, rotY, rotZ, scale);</p>
+    </div>
+    <p>It is best not to make entities manually. Rather, you should use .ntt files with an EntityManager as it will do this for you.</p>
+</div>
+
+<div class="methods">
+    <h3>methods</h3>
+    <div class="codeblock"><p>Entity.getModel();</p></div>
+    <p>This method returns the TexturedModel of the Entity.</p>
+
+    <div class="codeblock"><p>Entity.setModel(TexturedModel model);</p></div>
+    <p>This method changes the model of the Entity to whatever TexturedModel is provided.</p>
+
+    <div class="codeblock"><p>Entity.getPosition();</p></div>
+    <p>Returns the position of the Entity.</p>
+
+    <div class="codeblock"><p>Entity.setPosition(Vector3f position);</p></div>
+    <p>Sets the position of the Entity to whatever is provided.</p>
+
+    <div class="codeblock"><p>Entity.increasePosition(float dx, float dy, float dz);</p></div>
+    <p>Translates the position by whatever is provided.</p>
+
+    <div class="codeblock"><p>Entity.setRotX(float rotX);</p></div>
+    <p>Sets the X rotation.</p>
+
+    <div class="codeblock"><p>Entity.setRotY(float rotY);</p></div>
+    <p>Sets the Y rotation.</p>
+
+    <div class="codeblock"><p>Entity.setRotZ(float rotZ);</p></div>
+    <p>Sets the Z rotation.</p>
+
+    <div class="codeblock"><p>Entity.getRotX();</p></div>
+    <p>Returns the X rotation.</p>
+
+    <div class="codeblock"><p>Entity.getRotY();</p></div>
+    <p>Returns the Y rotation.</p>
+
+    <div class="codeblock"><p>Entity.getRotZ();</p></div>
+    <p>Returns the Z rotation.</p>
+
+    <div class="codeblock"><p>Entity.increaseRotation(float dx, float dy, float dz);</p></div>
+    <p>Increases the rotation by whatever is provided.</p>
+
+    <div class="codeblock"><p>Entity.setScale(float scale);</p></div>
+    <p>Sets the scale.</p>
+
+    <div class="codeblock"><p>Entity.getScale();</p></div>
+    <p>Returns the scale.</p>
+
+</div>
+
+</body>
+</html>
